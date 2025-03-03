@@ -1,7 +1,7 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Text.Json.Serialization;
 //using AspNetCoreRateLimit;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+//using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -16,11 +16,10 @@ namespace backend
 
             // build entire database inside the container if it doesn't exist yet:
 
-            //using(OnlineLearningPlatformContext db = new OnlineLearningPlatformContext())
-            //{
-            //    db.Database.EnsureCreated();
-            //    db.InitData();
-            //}
+            using(OnlineLearningPlatformContext db = new OnlineLearningPlatformContext())
+            {
+                db.Database.EnsureCreated();
+            }
 
 
             // Add services to the container.

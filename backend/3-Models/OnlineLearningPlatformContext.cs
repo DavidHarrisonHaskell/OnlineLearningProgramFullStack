@@ -16,4 +16,13 @@ public class OnlineLearningPlatformContext : DbContext
 
     }
 
+    public virtual DbSet<Course> Courses { get; set; }
+
+    public virtual DbSet<Enrollment> Enrollments { get; set; }
+
+    public virtual DbSet<Lesson> Lessons { get; set; }
+
+    public virtual DbSet<Progress> Progresses { get; set; }
+
+    public virtual DbSet<User> Users { get; set; }
 }
